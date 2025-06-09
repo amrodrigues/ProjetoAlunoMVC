@@ -21,6 +21,17 @@
 ## Rotas Personalizadas: 
  Implementa rotas amigáveis para URLs mais limpas (por exemplo, /meus-alunos/novo em vez de /Alunos/Create).
 
+## Gerenciamento de Recursos Estáticos (Font Awesome)
+
+Este projeto utiliza uma abordagem otimizada para carregar os ícones do Font Awesome, adaptando-se ao ambiente de execução:
+
+* **Ambiente de Desenvolvimento**: Durante o desenvolvimento local, os arquivos do Font Awesome (versão 6.4.0) são carregados a partir de uma cópia local (`~/lib/font-awesome/font-awesome_6.4.0_css_all.min.css`). Isso garante que o desenvolvimento possa prosseguir mesmo sem conexão à internet.
+* **Outros Ambientes (Produção, Teste, etc.)**: Em ambientes de produção e outros que não sejam de desenvolvimento, os ícones são carregados de uma Content Delivery Network (CDN) externa (do `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css` na versão 6.5.0). Essa prática melhora o desempenho da aplicação, utilizando servidores otimizados para a entrega global de conteúdo.
+
+![image](https://github.com/user-attachments/assets/af604234-1d2f-4109-9f2d-e3db5d45a085)
+
+Essa configuração garante flexibilidade no desenvolvimento e otimização de performance em produção.
+
 ## Autorização: 
  Implementação de autorização básica, exigindo que os usuários estejam autenticados para acessar as funcionalidades de gerenciamento de alunos.
 
